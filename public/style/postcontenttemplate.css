@@ -1,0 +1,83 @@
+.hpcontainer {
+	border: 1px solid #CCCCCC;
+	padding: 20px;
+	background: white;
+}
+
+.postcontainertitle {
+	text-align: left;
+	font-size: 30px;
+	color: red;
+	border-bottom: 1px dotted #CCCCCC;
+}
+
+form {
+	margin: 0;
+	padding: 15px;
+}
+
+fieldset {
+	border: none;
+	text-align: left;
+}
+
+input,textarea, select {
+	margin: 10px;
+	border: 1px solid #CCCC;
+	padding: 3px;
+	color: gray;
+}
+select {
+	padding: 6px;
+}
+.title,.tags {
+	width: 50%;
+	font-size: 18px;
+	padding: 5px 8px;
+}
+
+.tags {
+	width: 94%;
+}
+
+.image {
+	width: 52%;
+	cursor: pointer;
+}
+
+.contenttopost {
+	resize: none;
+	padding: 15px;
+	line-height: 2em;
+	width: 92%;
+}
+
+input[type="submit"] {
+	background: #1E85EA;
+	border: 1px solid #1E85EA;
+	cursor: pointer;
+	color: whitesmoke;
+	font-weight: bold;
+	padding: 7px;
+	font-size: 17px;
+	float: right;
+}
+
+input[type="reset"] {
+	padding: 8px;
+	font-size: 17px;
+	float: right;
+	border: 1px solid #CCCCCC;
+}
+
+input[type="reset"]:hover {
+	background: red;
+	color: whitesmoke;
+	cursor: pointer;
+}
+.message {
+	font-size: 20px;
+	float: right;
+	margin: 20px 0px;
+	color: red;
+}

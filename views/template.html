@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>{% block title %}{% endblock %}</title> {% block style %}
+<link rel="stylesheet" href="../public/style/template.css"
+	type="text/css" media="screen" charset="utf-8" />
+{% endblock %} {% block script %}
+<script src="../public/js/jquery-1.10.2.js" type="text/javascript"
+	charset="utf-8"></script>
+<script type="text/javascript" src="../public/js/template.js"
+	charset="utf-8"></script>
+{% endblock %}
+</head>
+<body>
+	<div class="container" align="center">
+		<div>
+			<div class="menucontainer">
+				<div class="menubar">
+					<ul class="topleftmenu">
+						<li><a href="/">Home</a></li>
+						<!--  <li>Tech</li>
+						<li>Blog</li>
+					</ul>
+					<ul class="toprightmenu">
+						<li>Signup</li>
+						<li>Login</li>
+						<li><img id="serach" src="../public/images/magnify.png"
+							class="magnify" /></li>
+						<li><input autofocus placeholder="Search" id="searchbox"
+							type="text" class="searchbox" /></li> -->
+					</ul>
+				</div>
+				<div class="logocontainer">
+					<img src="../public/images/logo.png" width="70" height="70"
+						onclick="javascript:window.location.href='/';" />
+				</div>
+			</div>
+		</div>
+		<div class="vgap"></div>
+		<div class="content">
+			<div class="datacontainer">{% block content %}{% endblock %}</div>
+			<div class="tdright">
+				<div class="rightwindowmenu">
+					<span class="rightwindowtitle">Title</span> <img
+						src="../public/images/people.png" class="people" />
+						<!-- <img src="../public/images/timer.png" class="timer" /> -->
+				</div>
+				<div class="rightwindow">
+				{% block rightwindow %} {% endblock %}
+					<div class="footer">&copy; 2013 Srihari, Inc.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{% extends "template.html" %} {% block title %}Home{% endblock %} 
+{% block style %} {% parent %}
+<link rel="stylesheet" href="../public/style/postcontenttemplate.css"
+	type="text/css" media="screen" charset="utf-8" />
+{% endblock %} {% block script %} {% parent %}
+<script type="text/javascript" src="../public/js/postcontenttemplate.js"
+	charset="utf-8"></script>
+{% endblock %} {% block content %}
+<div class='hpcontainer'>
+	<div class="postcontainertitle">
+		<span>Share your valuable thoughts here!</span>
+	</div>
+	<div>
+		<form action="/postcontent" method="post"
+			enctype="multipart/form-data">
+			<fieldset>
+				<input type="hidden" name="Author" id="Author" placeholder="Author"
+					class="Author" value="Srihari Miriyala" /> <input type="text"
+					name="Title" id="Title" autofocus="autofocus" placeholder="Title"
+					class="title" title="suitable title" /> <br />
+					<select class='Typeof' id="Type" name = "Type">
+					<option value="TECH">Tech</option>
+					<option value="GENERAL" >General</option>
+					<option value="TYPE" selected="selected">Type</option>
+					</select> <br /> <input type="file"
+					name="Image" id="Image" class="image"
+					title="upload suitable image for your post"> <br /> <label
+					style="padding-left: 10px; cursor:pointer; text-decoration: underline"
+					for="paragraph" id="paragraph" title="Paragraph">P</label> <label
+					style="padding-left: 5px; cursor:pointer; text-decoration: underline" for="code"
+					id="code" title="Code">#</label>
+				<textarea rows="7" class="contenttopost" name="Post" id="Post"
+					placeholder="Write down your thoughts"></textarea>
+				<br /> <input type="text" name="Tags" title="Tags separated by ,"
+					placeholder="Tags separated by , Example: Nodejs, MongoDB"
+					id="Tags" class="tags" /> <br /> <input type="reset"
+					name="Cancel" value="Cancel" id="Cancel" onclick="return clearForm()" /> <input type="submit"
+					value="Post &rarr;" id="Submit" onclick="return validateForm()"/> <label id="message"
+					class="message"> {{ Message }}</label>
+			</fieldset>
+		</form>
+	</div>
+</div>
+{% endblock %}

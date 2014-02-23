@@ -1,0 +1,189 @@
+{% extends "template.html" %} {% block title %}Home{% endblock %}
+{% block style %} {% parent %}
+<link rel="stylesheet" href="../public/style/posttemplate.css"
+	type="text/css" media="screen" charset="utf-8" />
+{% endblock %} {% block content %}
+<div class='hpcontainer'>
+	<div class="posttitle">
+		<div>
+			<span>About Nodejs</span>
+			<div class="divlikscount">
+				<table>
+					<tr>
+						<td><img src="../public/images/thumbs.up.png" width="20"
+							height="20" class="imglikescount" /></td>
+						<td valign="top"><span class="likescount">1</span></td>
+					</tr>
+				</table>
+			</div>
+
+		</div>
+		<div class="postdetails">
+			<span class="postdate">Date:-</span><span class="postdatetime">2013-09-17
+				20:00</span><span class="authortitle">Author:-</span><span class="author">Srihari.Miriyala</span>
+		</div>
+	</div>
+	<div class="dottedbottomborder gap">
+		<div class="hpcontainerimg" align="center">
+			<img src="../public/images/nodejs.png" />
+		</div>
+		<p>In the "hello world" web server example below, many client
+			connections can be handled concurrently. Node tells the operating
+			system (through epoll, kqueue, /dev/poll, or select) that it should
+			be notified when a new connection is made, and then it goes to sleep.
+			If someone new connects, then it executes the callback. Each
+			connection is only a small heap allocation.</p>
+		<pre>
+        var http = require('http');
+        http.createServer(function (req, res) {
+          res.writeHead(200, {'Content-Type': 'text/plain'});
+          res.end('Hello World\n');
+        }).listen(1337, "127.0.0.1");
+        console.log('Server running at http://127.0.0.1:1337/');
+    </pre>
+		<p>This is in contrast to today's more common concurrency model
+			where OS threads are employed. Thread-based networking is relatively
+			inefficient and very difficult to use. See: this and this. Node will
+			show much better memory efficiency under high-loads than systems
+			which allocate 2mb thread stacks for each connection. Furthermore,
+			users of Node are free from worries of dead-locking the process -
+			there are no locks. Almost no function in Node directly performs I/O,
+			so the process never blocks. Because nothing blocks, less-than-expert
+			programmers are able to develop fast systems.</p>
+		<p>Node is similar in design to and influenced by systems like
+			Ruby's Event Machine or Python's Twisted. Node takes the event model
+			a bit further - it presents the event loop as a language construct
+			instead of as a library. In other systems there is always a blocking
+			call to start the event-loop. Typically one defines behavior through
+			callbacks at the beginning of a script and at the end starts a server
+			through a blocking call like EventMachine::run(). In Node there is no
+			such start-the-event-loop call. Node simply enters the event loop
+			after executing the input script. Node exits the event loop when
+			there are no more callbacks to perform. This behavior is like browser
+			javascript - the event loop is hidden from the user.</p>
+		<p>HTTP is a first class protocol in Node. Node's HTTP library has
+			grown out of the author's experiences developing and working with web
+			servers. For example, streaming data through most web frameworks is
+			impossible. Node attempts to correct these problems in its HTTP
+			parser and API. Coupled with Node's purely evented infrastructure, it
+			makes a good foundation for web libraries or frameworks.</p>
+		<p>But what about multiple-processor concurrency? Aren't threads
+			necessary to scale programs to multi-core computers? You can start
+			new processes via child_process.fork() these other processes will be
+			scheduled in parallel. For load balancing incoming connections across
+			multiple processes use the cluster module.</p>
+
+	</div>
+	<div class="postdetails">
+		<div class="likescontainer">
+			<img src="../public/images/thumbs.up.png" title="like" width="20"
+				height="20" class="imglike" /><img
+				src="../public/images/thumbs.down.png" title="dislike" width="20"
+				height="20" class="imgdislike" />
+		</div>
+		<div class="tagscontainer">
+			<span class="tagstitle">Tags:- </span>
+			<ul>
+				<li><a href="#">#Nodejs</a></li>
+				<li><a href="#">#Nodejs</a></li>
+				<li><a href="#">#Nodejs</a></li>
+				<li><a href="#">#Nodejs</a></li>
+				<li><a href="#">#Nodejs</a></li>
+				<li><a href="#">#Nodejs</a></li>
+				<li><a href="#">#Nodejs</a></li>
+				<li><a href="#">#Nodejs</a></li>
+				<li><a href="#">#Nodejs</a></li>
+				<li><a href="#">#Nodejs</a></li>
+				<li><a href="#">#Nodejs</a></li>
+				<li><a href="#">#Nodejs</a></li>
+				<li><a href="#">#Nodejs</a></li>
+				<li><a href="#">#Nodejs</a></li>
+				<li><a href="#">#Nodejs</a></li>
+				<li><a href="#">#Nodejs</a></li>
+				<li><a href="#">#Nodejs</a></li>
+				<li><a href="#">#Nodejs</a></li>
+				<li><a href="#">#Nodejs</a></li>
+				<li><a href="#">#Nodejs</a></li>
+				<li><a href="#">#Nodejs</a></li>
+			</ul>
+		</div>
+		<div class="commentscontainer">
+			<span class="commentstitle">Comments:- </span>
+			<table class="tblComments">
+				<tr>
+					<td>
+						<p class="comment">HTTP is a first class protocol in Node.
+							Node's HTTP library has grown out of the author's experiences
+							developing and working with web servers. For example, streaming
+							data through most web frameworks is impossible. Node attempts to
+							correct these problems in its HTTP parser and API. Coupled with
+							Node's purely evented infrastructure, it makes a good foundation
+							for web libraries or frameworks.</p>
+						<p>
+							<span class="commentedby">Srihari.Miriyala</span> <br /> <span
+								class="postdatetime toright">2013-09-17 20:00</span><span
+								class="postdate toright">Date:-</span>
+						</p>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<p class="comment">HTTP is a first class protocol in Node.
+							Node's HTTP library has grown out of the author's experiences
+							developing and working with web servers. For example, streaming
+							data through most web frameworks is impossible. Node attempts to
+							correct these problems in its HTTP parser and API. Coupled with
+							Node's purely evented infrastructure, it makes a good foundation
+							for web libraries or frameworks.</p>
+						<p>
+							<span class="commentedby">Srihari.Miriyala</span> <br /> <span
+								class="postdatetime toright">2013-09-17 20:00</span><span
+								class="postdate toright">Date:-</span>
+						</p>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<p class="comment">HTTP is a first class protocol in Node.
+							Node's HTTP library has grown out of the author's experiences
+							developing and working with web servers. For example, streaming
+							data through most web frameworks is impossible. Node attempts to
+							correct these problems in its HTTP parser and API. Coupled with
+							Node's purely evented infrastructure, it makes a good foundation
+							for web libraries or frameworks.</p>
+						<p>
+							<span class="commentedby">Srihari.Miriyala</span> <br /> <span
+								class="postdatetime toright">2013-09-17 20:00</span><span
+								class="postdate toright">Date:-</span>
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>
+							Total Comments: 30(<a href="#">show all</a>)
+						</p>
+					</td>
+				</tr>
+			</table>
+			<form class="gap" method="post" enctype="multipart/form-data"
+				action="/">
+				<fieldset class="fstextarea">
+					<textarea maxlength="300" name="Comment" rows="5"
+						placeholder="Thanks..."></textarea>
+				</fieldset>
+				<fieldset class="fsFields">
+					<input type="text" name="Name" size="23" placeholder="Name"
+						id="Name" /> <br /> <br /> <input type="text" name="Email"
+						size="23" placeholder="example@mail.com" id="Email" /> <br /> <br />
+					<!-- <input type="file" name="file"> -->
+					<input type="submit" value="Comment  &rarr;"> <input
+						type="reset" name="Cancel" value="Cancel" id="Cancel" />
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}

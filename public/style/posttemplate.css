@@ -1,0 +1,230 @@
+.hpcontainer {
+	border: 1px solid #CCCCCC;
+	padding: 20px 20px 130px 20px;
+	text-align: left;
+	background: white;
+}
+
+.hpcontainerimg {
+	margin-top: 30px;
+	width: 100%;
+	text-align: center;
+}
+.hpcontainerimg img {
+	max-width: 70%;
+	max-height: 400px;
+}
+#divpost{
+	padding: 10px 0;
+	word-wrap: break-word;
+}
+p {
+	width: inherit;
+	display: block;
+	margin: 1em 0;
+	line-height: 1.4;
+	font-size: 1em;
+	word-break: break-word;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}
+
+pre, code {
+	padding: 20px 0;
+	background: whitesmoke;
+	border-left: 1px solid #CCCCCC;
+}
+
+.posttitle2 {
+	font-size: 30px;
+	color: red;
+	word-wrap: break-word;
+	border-bottom: 1px dotted #CCCCCC;
+	text-align: left;
+}
+
+.postdetails {
+	padding-top: 10px;
+}
+
+.author {
+	color: #222222;
+	font-size: 11px;
+}
+
+.authortitle {
+	color: red;
+	font-size: 12px;
+}
+
+.imglike,.imglikescount {
+	background: #1E85EA;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.imgdislike {
+	background: red;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.likescount {
+	color: #1E85EA;
+	float: right;
+	font-size: 12px;
+}
+
+.divlikscount {
+	float: right;
+}
+
+.dottedbottomborder {
+	border-bottom: 1px dotted #CCCCCC;
+}
+
+.postdate {
+	font-size: 12px;
+	color: red;
+}
+
+.postdatetime {
+	font-size: 11px;
+	color: #222222;
+}
+
+.tagstitle,.commentstitle {
+	font-weight: bold;
+}
+
+.tagscontainer {
+	margin: 0;
+}
+
+.tagscontainer ul {
+	margin: 0;
+	margin-top: -30px;
+	margin-left: 5px;
+	list-style: none;
+}
+
+.tagscontainer ul li {
+	float: left;
+	padding: 0px 3px;
+}
+
+.tagscontainer ul li a,.tagscontainer ul li a:active {
+	color: #A3A3A4;
+	text-decoration: none;
+}
+
+.tagscontainer ul li a:hover {
+	color: #A3A3A4;
+	text-decoration: underline;
+}
+.link {
+	text-decoration: underline;
+	color: #1E85EA;
+	cursor: pointer;
+}
+.commentscontainer {
+	width: 100%;
+	margin: 0;
+	margin-top: 80px;
+	padding: 0;
+}
+
+.gap {
+	padding-bottom: 20px;
+}
+
+.likescontainer {
+	float: right;
+}
+
+textarea {
+	padding: 15px;
+	width: 90%;
+	resize: none;
+}
+
+input[type="submit"] {
+	background: #1E85EA;
+	border: 1px solid #1E85EA;
+	cursor: pointer;
+	color: whitesmoke;
+	padding: 5px 4px;
+}
+
+input[type="button"] {
+	padding: 4px;
+	border: 1px solid #CCCCCC;
+}
+
+input[type="button"]:hover {
+	background: red;
+	color: whitesmoke;
+	border: 1px solid red;
+	cursor: pointer;
+	padding: 4px;
+}
+
+input[type="text"] {
+	padding: 4px;
+	font-size: 11px;
+}
+
+.comment span:first-child {
+	text-decoration: underline;
+}
+
+.tblComments {
+	margin-top: 20px;
+	width: 100%;
+}
+
+.tblComments tr:nth-child(odd) td:first-child {
+	background: whitesmoke;
+	border-top: 1px dashed #CCCCCC;
+	border-bottom: 1px dashed #CCCCCC;
+}
+
+.tblComments tr td {
+	padding: 8px 20px;
+}
+
+.commentedby {
+	float: right;
+	margin-right: 3px;
+	color: #1E85EA;
+}
+
+.toright {
+	float: right;
+	padding: 3px;
+}
+
+.fstextarea {
+	width: 60%;
+	border: none;
+}
+
+fieldset {
+	float: left;
+}
+
+.fsFields {
+	border: none;
+}
+
+.fsFields input {
+	padding: 5px;
+}

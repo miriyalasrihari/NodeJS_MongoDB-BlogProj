@@ -1,0 +1,33 @@
+{% extends "template.html" %} {% block title %}MandM{% endblock %} 
+{% block style %} {% parent %}
+<link rel="stylesheet" href="../public/style/hometemplate.css"
+	type="text/css" media="screen" charset="utf-8" />
+{% endblock %}{% block script %} {% parent %}
+<script type="text/javascript" src="../public/js/hometemplate.js"
+    charset="utf-8"></script>
+{% endblock %}{% block content %}
+<input type="hidden" id="postsdummycount" class="postsdummycount" value="-1" />
+<div class="aligncenter" id="PostContainerDIV" align = "center">
+	{% for post in AllPosts %}
+	<div class="postcontainer">
+		<div class="posttitle" id="{{ post.PostID }}">{{ post.Title.substring(0,40) }}</div>
+		<div class="postdetails">
+			<span class="postdatetime dt" title="{{ post.Date }}">{{ post.Date }}</span><span
+				class="postdate">Date:-</span><span class="authortitle">Author:-</span><span
+				class="author">{{ post.Author }}</span>
+		</div>
+		<div align="center" class="imgContainer">
+		{% if post.Image %} <img src="data:image/jpeg;base64,{{ post.Image }}" />
+		{% endif %}
+		</div>
+		<div class="shortpost">{{ post.ShortPost }}</div>
+	</div>
+	{% endfor %}
+</div>
+{% endblock %} {% block rightwindow %}
+<ul class="rightnewsfeed">
+	{% for post in Posts %}
+	<li><a href="/post/{{ post.PostID }}"> &#187; {{ post.Title }}
+	</a></li> {% endfor %}
+</ul>
+{% endblock %}

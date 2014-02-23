@@ -1,0 +1,101 @@
+{% extends "template.html" %} {% block title %}MandM | {{ Title }}
+{% endblock %} {% block style %} {% parent %}
+<link rel="stylesheet" href="../public/style/posttemplate.css"
+	type="text/css" media="screen" charset="utf-8" />
+{% endblock %}{% block script %}{% parent %}
+<script type="text/javascript" src="../public/js/posttemplate.js"
+    charset="utf-8"></script>
+{% endblock %} 
+{% block content %}
+<div class='hpcontainer'>
+	<div class="posttitle2">
+		<div>
+			<span>{{ Title }}</span>
+			<div class="divlikscount">
+				<table>
+					<tr>
+						<td><img src="../public/images/thumbs.up.png" width="20"
+							height="20" class="imglikescount" onclick="likeajax(true)" /></td>
+						<td valign="top"><span class="likescount" id="likesCount">
+								{{ Likes }}</span></td>
+					</tr>
+				</table>
+			</div>
+
+		</div>
+		<div class="postdetails">
+			<span class="postdate">Date:-</span><span class="postdatetime dt">
+				{{ PDate }} </span><span class="authortitle">&nbsp; Author:-</span><span
+				class="author">{{ Author }}</span>
+		</div>
+	</div>
+	<div class="dottedbottomborder gap">
+		<div class="hpcontainerimg" align="center">
+			{% if Image %} <img src="data:image/jpeg;base64,{{ Image }}" /> 
+			{% endif %}
+		</div>
+		<div id="divpost">{{ Post }}</div>
+	</div>
+	<div class="postdetails">
+		<div class="likescontainer">
+			<img src="../public/images/thumbs.up.png" title="like" width="20"
+				height="20" class="imglike" onclick="likeajax(true)" /><!-- <img
+				src="../public/images/thumbs.down.png" title="dislike" width="20"
+				height="20" class="imgdislike" onclick="likeajax(false)" /> -->
+		</div>
+		<div class="tagscontainer">
+			<span class="tagstitle">Tags:- </span>
+			<ul>
+				{% for tag in Tags %}
+				<li><a href="#">#{{ tag }},</a>&nbsp;</li> {% endfor %}
+			</ul>
+		</div>
+		<div class="commentscontainer">
+			<span class="commentstitle">Comments:- </span>
+			<table class="tblComments" id="tblComments">
+				{% for comment in Comments %}
+				<tr>
+					<td>
+						<p class="comment">{{ comment.Comment }}</p>
+						<p>
+							<span class="commentedby">{{ comment.Author }}</span> <br /> <span
+								class="postdatetime toright dt" title="{{comment.Date}}">{{ comment.Date }}</span><span
+								class="postdate toright">Date:-</span>
+						</p>
+					</td>
+				</tr>
+				{% endfor %}
+				{% if TotalComments > 2 %}
+				<tr>
+					<td>
+						<p>
+							Total Comments: <span id="cntComment">{{ TotalComments }}</span>(<span class="link" onclick="getAllComments()">show all</span>)
+						</p>
+					</td>
+				</tr>
+				{% endif %}
+			</table>
+			<div class="gap">
+				<fieldset class="fstextarea">
+					<textarea maxlength="300" name="Comment" rows="5"
+						placeholder="Thanks..." id="Comment"></textarea>
+				</fieldset>
+				<fieldset class="fsFields">
+					<input type="hidden" name="PostID" id="PostID" value="{{ PostID }}" />
+					<input type="text" name="Name" size="23" placeholder="Name"
+						id="Name" /> <br /> <br /> <input type="text" name="Email"
+						size="23" placeholder="example@mail.com" id="Email" /> <br /> <br />
+					<input type="submit" value="Comment  &rarr;" onclick="postcomment()" />
+					<input type="button" name="Cancel" value="Cancel" id="Cancel" onclick='clearCommentFields()'/>
+				</fieldset>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %} {% block rightwindow %}
+<ul class="rightnewsfeed">
+	{% for post in Posts %}
+	<li><a href="/post/{{ post.PostID }}"> &#187; {{ post.Title }}
+	</a></li> {% endfor %}
+</ul>
+{% endblock %}
